@@ -77,6 +77,22 @@ public class Reausablesteps {
 	    	
 	    	
 	    }
+	 
+	 
+	 public void dropdown1(WebDriver driver, WebElement element, String dropdowntext) {
+	    	
+	    	if(element!=null) {
+	    		waitForElementToBeClickable(driver, element, 20);
+	            element.isDisplayed();
+	            Select objSelect =new Select(element);
+	            objSelect.selectByVisibleText(dropdowntext);
+	    	}
+	    	else {
+	    		System.out.println(element + "is not dispalyed");
+	    	}
+	    	
+	    	
+	    }
 	
 	
 }
